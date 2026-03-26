@@ -1,0 +1,10 @@
+/* Fixed behind all content */
+.three-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  pointer-events: none;
+  display: block;
+}

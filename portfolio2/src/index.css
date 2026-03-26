@@ -8,11 +8,18 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: #090d1a;
+  /* ThreeBackground canvas provides the dark-space background */
+  background: #050b18;
   color: #cdd6f4;
   font-family: 'Outfit', sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
+}
+
+/* Ensure all sections sit above the fixed canvas */
+.main, main {
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Scrollbar ──────────────────────────────── */

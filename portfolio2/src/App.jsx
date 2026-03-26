@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import Landing from './components/Landing';
+import ThreeBackground from './components/ThreeBackground';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -9,32 +12,44 @@ import Contact from './components/Contact';
 import './index.css';
 
 export default function App() {
+  const [entered, setEntered] = useState(false);
+
   return (
     <>
-      <Navbar />
+      {/* Global 3-D starfield / orb background (fixed, behind everything) */}
+      <ThreeBackground />
 
-      <main className="main">
-        {/* ── Home (with 3D laptop) ── */}
-        <Home />
+      {/* Landing page — shown first, disappears after user clicks "Enter Portfolio" */}
+      {!entered && <Landing onEnter={() => setEntered(true)} />}
 
-        {/* ── About ── */}
-        <About />
+      {/* Main portfolio — revealed after landing */}
+      {entered && (
+        <>
+          <Navbar />
+          <main className="main">
+            {/* ── Home (3D laptop) ── */}
+            <Home />
 
-        {/* ── Training ── */}
-        <Training />
+            {/* ── About ── */}
+            <About />
 
-        {/* ── Projects ── */}
-        <Projects />
+            {/* ── Training ── */}
+            <Training />
 
-        {/* ── Certificates ── */}
-        <Certificates />
+            {/* ── Projects ── */}
+            <Projects />
 
-        {/* ── Skills ── */}
-        <Skills />
+            {/* ── Certificates ── */}
+            <Certificates />
 
-        {/* ── Contact ── */}
-        <Contact />
-      </main>
+            {/* ── Skills ── */}
+            <Skills />
+
+            {/* ── Contact ── */}
+            <Contact />
+          </main>
+        </>
+      )}
     </>
   );
 }
