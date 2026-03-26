@@ -1,0 +1,70 @@
+/* =========================================================
+   Global base styles
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #090d1a;
+  color: #cdd6f4;
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #090d1a; }
+::-webkit-scrollbar-thumb { background: #00ffb2; border-radius: 4px; }
+
+/* ── Main content area ─────────────────────── */
+.main {
+  padding-top: 68px;           /* navbar height */
+}
+
+/* ── Placeholder sections ──────────────────── */
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,255,178,0.25), transparent);
+}
+
+.section__title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #00ffb2, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section__sub {
+  font-family: 'JetBrains Mono', monospace;
+  color: #6c7aa0;
+  font-size: 0.95rem;
+}
+
+.prompt {
+  color: #00e5ff;
+  margin-right: 0.4rem;
+}

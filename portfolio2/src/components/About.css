@@ -1,0 +1,241 @@
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about {
+  padding: 6rem 5vw 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about__header,
+.about__grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Header ── */
+.about__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.about__prompt {
+  font-family: 'JetBrains Mono', monospace;
+  color: #00ffb2;
+  font-size: 1.4rem;
+  text-shadow: 0 0 10px #00ffb2;
+}
+
+.about__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #cdd6f4;
+  white-space: nowrap;
+}
+
+.about__line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0,255,178,0.4), transparent);
+}
+
+/* ── Grid ── */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ── Card ── */
+.about__card {
+  background: rgba(13, 17, 28, 0.7);
+  border: 1px solid rgba(0, 255, 178, 0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s;
+}
+
+.about__card:hover {
+  border-color: rgba(0, 255, 178, 0.3);
+}
+
+.about__card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #cdd6f4;
+  margin-bottom: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about__icon {
+  font-size: 1.2rem;
+}
+
+/* ── Left: bio ── */
+.about__bio {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.97rem;
+  color: #8b95b8;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about__bio strong {
+  color: #cdd6f4;
+}
+
+.about__bio em {
+  color: #00e5ff;
+  font-style: normal;
+}
+
+/* ── Contact chips ── */
+.about__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+
+.about__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  background: rgba(0, 229, 255, 0.06);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #00e5ff;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.about__chip:hover {
+  background: rgba(0, 229, 255, 0.14);
+  border-color: #00e5ff;
+  transform: translateY(-1px);
+}
+
+/* ── Right: education timeline ── */
+.about__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+/* Vertical line */
+.about__timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(180deg, #00ffb2, #00e5ff, rgba(0,229,255,0.1));
+  border-radius: 2px;
+}
+
+.about__edu-item {
+  display: flex;
+  gap: 1.2rem;
+  padding-bottom: 1.8rem;
+  position: relative;
+}
+
+.about__edu-item:last-child {
+  padding-bottom: 0;
+}
+
+.about__edu-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00ffb2, #00e5ff);
+  box-shadow: 0 0 12px rgba(0,255,178,0.5);
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.about__edu-content {
+  flex: 1;
+}
+
+.about__edu-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.about__edu-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #4a5370;
+  letter-spacing: 0.05em;
+}
+
+.about__edu-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.about__edu-badge--green {
+  background: rgba(0, 255, 178, 0.15);
+  color: #00ffb2;
+  border: 1px solid rgba(0, 255, 178, 0.3);
+}
+
+.about__edu-degree {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #cdd6f4;
+  margin-bottom: 0.25rem;
+}
+
+.about__edu-school {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: #00e5ff;
+  margin-bottom: 0.3rem;
+}
+
+.about__edu-detail {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  color: #6c7aa0;
+  line-height: 1.6;
+}
+
+.about__edu-detail strong {
+  color: #a6b0d8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    padding: 5rem 1.5rem 4rem;
+  }
+}

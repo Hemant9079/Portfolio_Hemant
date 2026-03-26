@@ -1,0 +1,175 @@
+/* =========================================================
+   TRAINING SECTION
+   ========================================================= */
+
+.training {
+  padding: 6rem 5vw 5rem;
+  position: relative;
+}
+
+/* ── Header ── */
+.training__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.training__prompt {
+  font-family: 'JetBrains Mono', monospace;
+  color: #00ffb2;
+  font-size: 1.4rem;
+  text-shadow: 0 0 10px #00ffb2;
+}
+
+.training__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #cdd6f4;
+  white-space: nowrap;
+}
+
+.training__line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0,255,178,0.4), transparent);
+}
+
+/* ── List ── */
+.training__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Card ── */
+.training__card {
+  background: rgba(13, 17, 28, 0.7);
+  border: 1px solid rgba(0, 255, 178, 0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s, transform 0.25s;
+}
+
+.training__card:hover {
+  border-color: rgba(0, 255, 178, 0.3);
+  transform: translateY(-3px);
+}
+
+/* ── Card header ── */
+.training__card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.training__card-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.training__icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.training__card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #cdd6f4;
+  margin-bottom: 0.3rem;
+}
+
+.training__org {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: #00e5ff;
+  letter-spacing: 0.04em;
+}
+
+.training__card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.training__period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #4a5370;
+  letter-spacing: 0.05em;
+}
+
+.training__badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  padding: 2px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.training__badge--green {
+  background: rgba(0, 255, 178, 0.15);
+  color: #00ffb2;
+  border: 1px solid rgba(0, 255, 178, 0.3);
+}
+
+/* ── Bullet points ── */
+.training__points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 0;
+  margin: 0;
+}
+
+.training__point {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+}
+
+.training__bullet {
+  color: #00ffb2;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.training__point span:last-child {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  color: #8b95b8;
+  line-height: 1.75;
+}
+
+.training__point strong {
+  color: #cdd6f4;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .training {
+    padding: 5rem 1.5rem 4rem;
+  }
+
+  .training__card-header {
+    flex-direction: column;
+  }
+
+  .training__card-right {
+    align-items: flex-start;
+  }
+}

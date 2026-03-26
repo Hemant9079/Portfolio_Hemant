@@ -1,0 +1,229 @@
+/* =========================================================
+   PROJECTS SECTION
+   ========================================================= */
+
+.projects {
+  padding: 6rem 5vw 5rem;
+}
+
+/* ── Header ── */
+.projects__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.projects__prompt {
+  font-family: 'JetBrains Mono', monospace;
+  color: #00ffb2;
+  font-size: 1.4rem;
+  text-shadow: 0 0 10px #00ffb2;
+}
+
+.projects__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #cdd6f4;
+  white-space: nowrap;
+}
+
+.projects__line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0,255,178,0.4), transparent);
+}
+
+/* ── Grid ── */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ──────────────────────────────────────────────────────────
+   PROJECT CARD
+   ────────────────────────────────────────────────────────── */
+.pcard {
+  position: relative;
+  background: rgba(13, 17, 28, 0.75);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 20px;
+  padding: 0 1.8rem 1.8rem;
+  backdrop-filter: blur(14px);
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.pcard:hover {
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+/* Coloured top strip */
+.pcard__strip {
+  height: 3px;
+  width: calc(100% + 3.6rem);
+  margin: 0 -1.8rem 1.6rem;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  border-radius: 20px 20px 0 0;
+}
+
+/* ── Card top row ── */
+.pcard__top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.pcard__icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pcard__icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.pcard__icon-img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.pcard__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.pcard__name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #cdd6f4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pcard__period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  color: #4a5370;
+  letter-spacing: 0.06em;
+}
+
+/* ── Link buttons ── */
+.pcard__links {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.pcard__link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  color: #8b95b8;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.pcard__link-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.pcard__link-btn--live:hover {
+  color: #00e5ff;
+  border-color: #00e5ff;
+  background: rgba(0,229,255,0.08);
+}
+
+/* ── Description ── */
+.pcard__desc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  color: #6c7aa0;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+
+/* ── Bullet points ── */
+.pcard__points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.pcard__point {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.pcard__bullet {
+  color: var(--accent);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.pcard__point span:last-child {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  color: #8b95b8;
+  line-height: 1.7;
+}
+
+/* ── Tech tags ── */
+.pcard__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.pcard__tag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  color: color-mix(in srgb, var(--accent) 80%, #fff);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .projects {
+    padding: 5rem 1.5rem 4rem;
+  }
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
