@@ -35,6 +35,22 @@ const projects = [
     gradient: 'from-purple to-blue',
     accentColor: '#a78bfa',
   },
+  {
+    title: 'Kharacha₹ — Expenses Tracker',
+    period: "Mar '26",
+    icon: '💰',
+    tags: ['React', 'TypeScript', 'CSS', 'JavaScript', 'Vercel'],
+    github: 'https://github.com/Hemant9079/expenses_tracker',
+    live: 'https://expensestracker-sage.vercel.app',
+    description: 'A modern personal finance tracker to manage transactions, visualise spending trends, and stay on top of your budget.',
+    points: [
+      'Built with React & TypeScript featuring full transaction management — add, edit, delete and categorise income/expense entries in real time.',
+      'Integrated interactive charts and analytics dashboards showing spending trends, category-wise breakdowns, and monthly/yearly comparisons.',
+      'Implemented dark mode, custom budget management, responsive design, and smooth animations for a premium user experience.',
+    ],
+    gradient: 'from-orange to-amber',
+    accentColor: '#f59e0b',
+  },
 ];
 
 export default function Projects() {
